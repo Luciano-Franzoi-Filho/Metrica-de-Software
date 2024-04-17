@@ -30,11 +30,11 @@
                             <span for="data_nascimento">Data Nascimento:</span>            
                         </div> 
                         <div class="placeholder">
-                            <input autocomplete="off" required type="number" maxlength="6" max="650" name="peso" id="peso" step="0.01" oninput="formatarValor(this)" >
+                            <input autocomplete="off" required type="number" maxlength="6" max="650" name="peso" id="peso" step="0.01" onkeyup="inputPesoNum()">
                             <span for="peso">Peso (KG):</span>            
                         </div> 
                         <div class="placeholder">
-                            <input autocomplete="off" required type="number" maxlength="4" max="2.5" name="altura" id="altura" step="0.01" oninput="formatarValor(this)" >  
+                            <input autocomplete="off" required type="number" maxlength="4" max="2.5" name="altura" id="altura" step="0.01" oninput="inputAlturaNum()" >  
                             <span for="altura">Altura (M):</span>          
                         </div>  
                         <div>

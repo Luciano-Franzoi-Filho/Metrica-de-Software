@@ -16,6 +16,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh; /* Ocupa 100% da altura da viewport */
     width: 100vw; /* ocupa 100% da  largura da viewport */
 }
@@ -71,11 +72,11 @@ body{
 .rodape{
     display: flex;
     justify-content: center;
+    margin-top: 5px;
 }
 
 .botao{
-    border-bottom: 10px;
-    width: 710px; /* Fazendo o botão ocupar metade do espaço com um pequeno espaço entre eles */
+    width: 560px;
     height:  30px;
     padding: 10px;
     background-color: rgba(8, 8, 193, 0.849);

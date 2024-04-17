@@ -24,6 +24,9 @@ class CalculadoraImc
 
     public function calcular(): float
     {
+        // if ($this->usuario->getPeso() === null) {
+        //     throw new DadosIncompletosException()
+        // }
         return $this->usuario->getPeso() / ($this->usuario->getAltura() * $this->usuario->getAltura());
     }
 }

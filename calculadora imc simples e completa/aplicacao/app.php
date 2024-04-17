@@ -16,7 +16,7 @@ $usuario = new Usuario( nome: $_POST['nome'],
 
 $calculadoraImc = new CalculadoraImc($usuario);
 if ($usuario->getIdadeAtual() >140) {
-    print_r("ja virou pó \n\n ");
+    $resultadoIdade = "já virou pó, ";
 }if ($usuario->getIdadeAtual()>= 10 && $usuario->getIdadeAtual() <= 19) {
     $resultado = ClassificacaoImcSexoEnum::classifica($calculadoraImc->calcular(), $usuario->getSexo(), $usuario->getIdadeAtual());
 }else{
@@ -44,7 +44,7 @@ $template = str_replace(
         $usuario->getIdadeAtual(),
         $usuario->getSexo()->value,
         number_format($calculadoraImc->calcular(), 2), // Formata o IMC para duas casas decimais
-        $resultado
+        $resultado //= $resultadoIdade . $resultado
     ],
     $template);
 

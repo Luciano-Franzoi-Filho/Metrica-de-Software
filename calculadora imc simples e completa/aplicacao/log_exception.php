@@ -18,7 +18,9 @@ try {
     print_r($usuario->fazAniversarioHoje(new DateTime('2000-01-01')));
     LogGeral::log(' teste fazaniversariohoje', $usuario->fazAniversarioHoje(new DateTime('2000-01-01')));
 } catch (ExemploException $e) {
+    // colocar o que fazer se cair na exception 
 } catch (DadosIncompletosException $e) {
+
 } catch (PesoExcedidoException $e) {
 } catch (AlturaExcedidaException $e) {
 } catch (\Throwable $th) {

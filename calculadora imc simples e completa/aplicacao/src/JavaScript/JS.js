@@ -22,3 +22,45 @@ function verificarCampos() {
         calculadora.classList.add('shake');
     }, 100); // Reinicia a animação após 100 milissegundos
 }
+
+
+function inputAlturaNum() {
+    let input = document.getElementById("altura");
+    alturaNum(input);
+}
+
+function alturaNum(Num) {
+    if (Num.value.length <= 0) {
+        Num.value = "0.000";
+    }
+    let padrao = Num.value;
+    padrao = padrao + "";
+    padrao = parseInt(padrao.replace(/[\D]+/g, ""));
+    padrao = padrao + "";
+    padrao = padrao.replace(/([0-9]{2})$/g, ".$1");
+    if (padrao.length > 4) {
+        padrao = padrao.replace(/([0-9]{2}).([0-9]{3}$)/g, ".$1.$2");
+    }
+    Num.value = padrao;
+}
+
+function inputPesoNum() {
+    let input = document.getElementById("peso");
+    pesoNum(input);
+    }
+
+function pesoNum(Num) {
+    if (Num.value.length <= 0) {
+        Num.value = "0.000";
+    }
+    let padrao = Num.value;
+    padrao = padrao + "";
+    padrao = parseInt(padrao.replace(/[\D]+/g, ""));
+    padrao = padrao + "";
+    padrao = padrao.replace(/([0-9]{2})$/g, ".$1");
+    if (padrao.length > 6) {
+        padrao = padrao.replace(/([0-9]{2}).([0-9]{3}$)/g, ".$1.$2");
+    }
+    Num.value = padrao;
+}
+
